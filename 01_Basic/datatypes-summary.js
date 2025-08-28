@@ -41,3 +41,38 @@ const myFunction = function() {
 console.log(typeof myFunction) // Object function
 console.log(typeof heroes) // Object
 console.log(typeof myobject) // Object
+
+
+
+// ******************************** Memory ****************************************
+
+/*
+    Here we see how data store in memory.
+    Stack(Primitive)
+    Heap(Non-primitive)
+*/
+
+let numberOne = 45
+let numberTwo = numberOne
+numberTwo = 49
+
+console.log(numberOne)
+console.log(numberTwo)
+
+let objectOne = {
+    name: "Aman Jha",
+    branch: "ECE",
+    place: "Bokaro"
+}
+
+let objectTwo = objectOne
+objectTwo.name = "Kr. Aditya Raj"
+objectTwo.branch = "CSE"
+objectTwo.place = "Chhapra"
+
+console.log(objectOne)
+console.log(objectTwo)
+
+/*
+    In primitive datatypes copy of value is pass, whereas in non-primitive datatypes reference is pass.(So changing in one affect the another, which is not possible in primitive datatypes.)
+*/
