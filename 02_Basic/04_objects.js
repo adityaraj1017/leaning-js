@@ -39,3 +39,35 @@ console.log(Object.entries(tinderUser))
 
 console.log(tinderUser.hasOwnProperty("isLoggedIn")) 
 // Return boolean depending on the situation whether the value is present or not
+
+const course = {
+    courseName: "Speaking bhojpuri",
+    price: 999,
+    courseInstructer: "Aditya"
+}
+
+// course.courseInstructer (Simply we used this)
+
+const {courseInstructer: instructer} = course; // Destructuring the object
+
+// console.log(courseInstructer);
+console.log(instructer);
+
+// **** API ****
+// Giving command to someone to do our work
+// After API call, its return the value in JSON format (object)
+
+/*
+    JSON (Javascript object notation)
+    { 
+        "courseName": "Js in hindi",
+        "prize": "free",
+        "courseInstructer": "Ashutosh"
+    }
+
+    [
+        {},
+        {},
+        {}
+    ]
+*/
