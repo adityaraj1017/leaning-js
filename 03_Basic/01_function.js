@@ -30,3 +30,44 @@ function logginUserMassage(name= "sam") {
 logginUserMassage("Aditya") // Only call the function doesn't do anything else
 console.log(logginUserMassage("Aditya"));
 // If we doesn't pass the argument then it take undefined as default
+
+
+// ********** Passing multiple value *********
+function calculatdCartPrize(...items) {
+    return items
+}
+// Here ... is rest operator, it combine the all items given to the function
+/*
+    If we used parameter as (num1, num2 , ...items), then first data goes to num1, second one goes to num2 and remaining goes to itmes
+*/
+
+console.log(calculatdCartPrize(20,24,81,138))
+
+
+// ********** Passing Object **********
+const user = {
+    name: "piyakkad",
+    prize: 399
+}
+
+function myObject(username) {
+    console.log(`Username is ${username.name} and prize is ${username.prize}`)
+}
+
+myObject(user)
+
+
+// ********** Passing Array **********
+const myArray = [24,5324,245,245]
+
+function returnSecondValue(myarray) {
+    return myarray[1]
+}
+
+console.log(returnSecondValue(myArray))
+
+/*
+    We can also passed array and object by the following ways:-
+    myObject({name:"piyakkad", prize:399}) For object
+    calculatedChartPrize([23,535,636,231])
+*/
