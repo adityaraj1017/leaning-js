@@ -3,10 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>DOM learning</title>
+    <style>
+        .bg-color{
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
 </head>
-<body>
-    <div class="bg-color">
-        <h1 class="heading">DOM learning from Chai or Code</h1>
+<body class="bg-color">
+    <div>
+        <h1 id="title" class="heading">DOM learning from Chai or Code</h1>
         <p>Lorem ipsum dolor sit amet.</p>
     </div>
 </body>
@@ -29,4 +35,37 @@ Document object model of above websites.
 
 HTML collection 
 We can select any element element using DOM and manipulate its according to our requirement.
+*/
+
+
+/*
+Differnt method of selecting the element of websites.
+1. By id :- (document.getElementById('title'))
+2. By class :- (document.getElementByClassName('headint'))  // Return HTML collection
+3. Query selectors :- (document.querySelector('CSS Selector'))  // Return only one value if multiple value present then, return first one
+4. Query selectors All :- (document.querySelectorAll('CSS Selector')) Return all element in Nodelist
+
+----------------------------------------------------------------------
+| *** Important ***                                                  |
+| There is difference between HTML collection and Nodelist.          |
+| Both are similar to Array but there is large difference from array |
+| All array method are not available for them                        |
+| We convert them in Array to apply the property :-                  |
+| Array.from(tempClassList)                                          |
+----------------------------------------------------------------------
+
+After selecting the element we can perform various function on it.
+document.getElementById('title').id // Give name of id
+document.getElementById('title').className // Give name of class
+document.getElementById('title').getAttributes('class') // Give name of class
+document.getElementById('title').setAttributes('class','test heading') // Set class from "heading" to "test heading"
+
+We also store the selected element into variable and perform the various task on variable, and it directly reflect on the element.
+var title = document.getElementById('title');
+title.style.backgroundColor = 'green' // Change the backgroundColor into green
+
+title.innerText   // Show only visible content
+title.textContent   // Show all present content
+title.innerHTML   //  Also show HTML present inside the element
+
 */
