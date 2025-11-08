@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating and Updating Element</title>
+</head>
+<body>
+    <div class="parent">
+        <div class="days">Monday</div>
+        <div class="days">Tuesday</div>
+        <div class="days">Wednesday</div>
+        <div class="days">Thursday</div>
+    </div>
+</body>
+</html>
+
+/*
+    ***** Selecting from parent to child *****
+    const parent = document.querySelector('parent')
+    parent  // Give class
+    parent.children  // Give HTML Collection
+    parent.firstChild  // Give first element
+    parent.lastChild  // Give last element
+
+    ***** Selecing from child to parent or sibling *****
+    const dayOne = document.querySelector('.day')
+    dayOne.parentElement  // Give parent
+    dayOne.nextElementSibling  // Give next sibling
+
+    parent.childNodes  // Give all the things present inside it. For the above code there are 9 Nodes.
+*/
