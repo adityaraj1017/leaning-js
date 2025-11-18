@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai or Javascript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // const sayDate = function() {
+    //     console.log("Sugan", Date.now())
+    // }
+    // setInterval(sayDate, 2000)
+
+    // By passing parameter
+    // const sayDate = function(str) {
+    //     console.log(str, Date.now())
+    // }
+    // setInterval(sayDate, 2000,'Hi')
+
+    const sayDate = function() {
+        console.log('Sugu', Date.now());
+    }
+
+    let clearDate = null;
+    document.querySelector('#start').addEventListener('click',function() {
+        if(clearDate === null) {
+            clearDate = setInterval(sayDate,1000)
+        }
+    })
+    // If interval is running and we create another interval then both will run
+
+    document.querySelector('#stop').addEventListener('click',function() {
+        clearInterval(clearDate);
+        clearDate = null
+    })
+
+</script>
+</html>
