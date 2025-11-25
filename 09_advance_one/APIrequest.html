@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Request</title>
+</head>
+<body>
+    <div>API is a talker between two system that may be front-end or back-end</div>
+</body>
+<script>
+    const requestAPI = 'https://api.github.com/users/adityaraj1017';
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET',requestAPI);
+    xhr.onreadystatechange = function() {
+        console.log(xhr.readyState);
+        if(xhr.readyState === 4) {
+            const data = JSON.parse(this.responseText) // this.responseTest give string
+            console.log(data.followers);
+        }
+    }
+    xhr.send();
+
+    // Here we are takeing the data from the github any displaying it
+</script> 
+</html>
